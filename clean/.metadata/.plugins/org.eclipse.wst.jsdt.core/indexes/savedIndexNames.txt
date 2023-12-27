@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\pnu\Documents\cleanProject\cleanProject\clean\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3938600765.index
+3647882494.index
+2570544597.index
+3142182092.index
+4246483835.index
+82772578.index

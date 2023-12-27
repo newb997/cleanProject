@@ -1,0 +1,5 @@
+package com.clean.config;
+
+public class WebConfiguration {
+
+}

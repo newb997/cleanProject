@@ -1,0 +1,11 @@
+package com.clean.service;
+
+import javax.validation.Valid;
+
+import com.clean.dto.AccountPDto;
+
+public interface AccountService {
+
+	void register(@Valid AccountPDto pMember);
+
+}
