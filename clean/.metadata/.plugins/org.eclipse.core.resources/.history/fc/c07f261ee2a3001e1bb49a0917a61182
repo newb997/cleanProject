@@ -1,0 +1,11 @@
+package com.clean.mapper;
+
+import com.clean.dto.AccountPDto;
+
+public interface AccountMapper {
+
+	static void insertMember(AccountPDto pMember) {
+		
+	}
+
+}

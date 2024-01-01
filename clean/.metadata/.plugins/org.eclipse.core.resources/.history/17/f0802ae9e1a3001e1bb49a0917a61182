@@ -1,0 +1,12 @@
+package com.clean.service;
+
+import com.clean.mapper.AccountMapper;
+
+public class AccountServiceImpl {
+
+	public void setAccountMapper(AccountMapper bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

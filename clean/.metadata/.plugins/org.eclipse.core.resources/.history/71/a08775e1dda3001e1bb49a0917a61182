@@ -1,0 +1,5 @@
+package com.clean.dto;
+
+public class AccountDto {
+
+}

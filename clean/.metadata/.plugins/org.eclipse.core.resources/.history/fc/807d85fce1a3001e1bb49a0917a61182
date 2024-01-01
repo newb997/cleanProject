@@ -1,0 +1,23 @@
+package com.clean.service;
+
+import org.springframework.stereotype.Service;
+
+import com.clean.dto.AccountPDto;
+import com.clean.mapper.AccountMapper;
+
+import lombok.Data;
+
+@Service
+public class AccountServiceImpl implements AccountService{
+
+	@Data
+	public void setAccountMapper(AccountMapper bean) {
+		
+	}
+
+	@Override
+	public void register(AccountPDto pMember) {
+		
+	}
+
+}
