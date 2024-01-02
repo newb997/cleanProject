@@ -45,4 +45,8 @@
 	</section>
 	<section name="NewWizardAction">
 	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="791"/>
+		<item key="DIALOG_Y_ORIGIN" value="409"/>
+	</section>
 </section>
