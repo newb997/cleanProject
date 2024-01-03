@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>sseug-ssag</groupId>
-  <artifactId>sseug-ssag</artifactId> <!-- 프로젝트 이름과 동일하게 작성 -->
+  <artifactId>sseug-ssag</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
@@ -106,7 +106,7 @@
 		    <artifactId>ojdbc10</artifactId>
 		    <version>19.21.0.0</version>
 		</dependency>
-		
+			
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
@@ -229,7 +229,6 @@
 
 	</dependencies>
 
-  
   
   <build>
     <plugins>

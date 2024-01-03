@@ -1,5 +1,0 @@
-package com.clean.mapper;
-
-public interface AccountMapper {
-
-}

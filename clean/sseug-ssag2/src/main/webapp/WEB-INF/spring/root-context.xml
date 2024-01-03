@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://mybatis.org/schema/mybatis-spring
+                           http://mybatis.org/schema/mybatis-spring.xsd">
+
+    <!-- Enable component scanning -->
+    <mybatis-spring:scan base-package="com.s4.mapper" />
+
+    <!-- Enable transaction management -->
+    <tx:annotation-driven />
+
+    <!-- Define the data source -->
+    <bean id="dbcpDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="username" value="clean" />
+        <property name="password" value="clean" />
+        <property name="maxTotal" value="10" />
+        <property name="maxIdle" value="5" />
+        <property name="maxWaitMillis" value="-1" />
+    </bean>
+
+    <!-- Define the JDBC template -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dbcpDataSource" />
+    </bean>
+
+    <!-- Define the SqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dbcpDataSource" />
+        <property name="configLocation" value="classpath:mybatis-config.xml" />
+    </bean>
+
+    <!-- Define the AccountPServiceImpl bean -->
+    <bean id="accountPService" class="com.s4.service.AccountPServiceImpl">
+        <property name="accountPMapper" ref="accountPMapper" />
+    </bean>
+
+    <!-- Define the transaction manager -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dbcpDataSource" />
+    </bean>
+
+</beans>

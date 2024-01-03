@@ -1,5 +1,0 @@
-package com.clean.controller;
-
-public interface AccountService {
-
-}

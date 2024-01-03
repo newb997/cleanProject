@@ -1,5 +1,0 @@
-package com.clean.service;
-
-public interface AccountService {
-
-}
