@@ -18,4 +18,10 @@ public class AccountPServiceImpl implements AccountPService{
 
 		accountPMapper.insertMember(pMember);
 	}
+	@Override
+	public AccountPDto findloginPMember(AccountPDto accountPDto) {
+		AccountPDto loginPMember = accountPMapper.selectMemberByIdAndPwd(accountPDto.getP_id(), accountPDto.getP_pw());
+		
+		return loginPMember;
+	}
 }
