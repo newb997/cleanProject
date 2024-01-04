@@ -17,11 +17,12 @@ public class AccountPController {
 	@Autowired
 	private AccountPService accountPService;
 	
+	//회원가입
 	@GetMapping(path = { "/register" })
 	public String registerForm(@ModelAttribute("pMember") AccountPDto pMember) {
 		return "account/register";
 	}
-	
+	//회원가입
 	@PostMapping(path = { "register" })
 	public String register(@ModelAttribute("pMember") AccountPDto pMember) {
 		accountPService.register(pMember);
@@ -29,5 +30,8 @@ public class AccountPController {
 		return "home";
 		//return "redirect:/account/login";
 	}
+	
+	//로그인
+	
 	
 }

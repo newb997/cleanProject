@@ -68,6 +68,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="slasd"/>
 			<item value="sseug-ssag"/>
 			<item value="rftghj"/>
 			<item value="clean2"/>
@@ -75,12 +76,26 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="slasd"/>
 			<item value="sseug-ssag"/>
 			<item value="rftghj"/>
 			<item value="clean2"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\pnu\Documents\cleanProject\cleanProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 	</section>
 </section>

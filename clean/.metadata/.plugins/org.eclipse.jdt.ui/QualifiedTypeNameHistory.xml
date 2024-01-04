@@ -18,4 +18,6 @@
     <fullyQualifiedTypeName name="com.s4.service.AccountPService"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.s4.dao.AccountPDao"/>
+    <fullyQualifiedTypeName name="com.s4.dto.AccountPDto"/>
 </qualifiedTypeNameHistroy>
