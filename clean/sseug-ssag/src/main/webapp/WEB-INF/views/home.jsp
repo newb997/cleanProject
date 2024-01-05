@@ -16,6 +16,16 @@
         <a href="/sseug-ssag/account/login" style="color: inherit;">
             <span class="mb-0 text font-weight-bold">로그인</span>
         </a>
+        
+		<c:choose>
+			<c:when test="${empty loginPuser}">
+				<li><a href="/sseug-ssag/account/login">로그인</a></li>
+			</c:when>
+			<c:otherwise>
+				<li><a href="/sseug-ssag/account/logout">로그아웃</a></li>
+			</c:otherwise>
+		</c:choose>
+   		  	
     </div>
     
 <div id="login">
