@@ -14,7 +14,7 @@ import com.s4.service.AccountPService;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping(path = { "/account" })
+@RequestMapping(path = { "/personal/account" })
 public class AccountPController {
 
 	@Autowired
@@ -22,7 +22,7 @@ public class AccountPController {
 	
 	//회원가입
 	@GetMapping(path = { "/register" })
-	public String registerForm(@ModelAttribute("pMember") AccountPDto pMember) {
+	public String registerForm(@ModelAttribute("accountP") AccountPDto accountP) {
 		return "account/register";
 	}
 	//회원가입
@@ -40,6 +40,7 @@ public class AccountPController {
 		return "account/login";
 	}
 	
+	//로그인
 	@PostMapping(path = { "/login" })
 	public String pLogin(AccountPDto accountPDto, HttpSession session, Model model) {
 		AccountPDto loginPMember = accountPService.findloginPMember(accountPDto);
@@ -54,6 +55,15 @@ public class AccountPController {
 		}
 	}
 	
+	//로그아웃
+	@GetMapping(path = { "/logout" })
+	public String logout(HttpSession session) {
+		
+//		session.invalidate();
+		session.removeAttribute("loginPuser");
+		
+		return "redirect:/home";
+	}
 	
 }
 
